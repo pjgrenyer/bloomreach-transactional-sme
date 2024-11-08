@@ -7,7 +7,7 @@ export default [
         files: ['**/*.{js,mjs,cjs,ts}'],
     },
     {
-        ignores: ['node_modules', 'dist', 'babel.config.js', 'test/setEnvVars.js'],
+        ignores: ['node_modules', 'dist', 'babel.config.js', 'test/setEnvVars.js', 'coverage'],
     },
     {
         languageOptions: { globals: globals.browser },

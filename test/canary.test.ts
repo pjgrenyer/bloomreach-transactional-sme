@@ -1,5 +1,5 @@
-describe("cannary", () => {
-    it("canary", () => {
+describe('cannary', () => {
+    it('canary', () => {
         expect(true).toBeTruthy();
-    })
-})
+    });
+});
