@@ -1,0 +1,50 @@
+{
+    "name": "bloomreach-transactional-sms",
+    "version": "0.0.1",
+    "description": "A nonofficial client library for sending transactional SMS via Bloomreach ",
+    "scripts": {
+        "prepare": "husky",
+        "build": "rimraf dist && tsc",
+        "dev": "npm run build && node dist/index.js",
+        "test": "jest --coverage --testPathIgnorePatterns='integration.*'",
+        "postbuild": "cpy '**/*' '!**/*.ts' ../dist/ --cwd=src/ --no-overwrite --parents",
+        "test-integration": "jest --testRegex='integration.*'",
+        "format": "prettier --write 'src/**/*.ts' 'test/**/*.ts' './*.js' './*.json' '!./package-lock.json'",
+        "lint": "eslint ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pjgrenyer/bloomreach-transactional-sms.git"
+    },
+    "keywords": [
+        "bloomreach",
+        "sms",
+        "transactional"
+    ],
+    "author": "Paul Grenyer",
+    "license": "SEE LICENSE IN LICENSE",
+    "bugs": {
+        "url": "https://github.com/pjgrenyer/bloomreach-transactional-sms/issues"
+    },
+    "homepage": "https://github.com/pjgrenyer/bloomreach-transactional-sms#readme",
+    "devDependencies": {
+        "@babel/preset-env": "^7.26.0",
+        "@babel/preset-typescript": "^7.26.0",
+        "@eslint/js": "^9.14.0",
+        "@types/jest": "^29.5.14",
+        "cpy-cli": "^5.0.0",
+        "eslint": "^9.14.0",
+        "husky": "^9.1.6",
+        "jest": "^29.7.0",
+        "nock": "^13.5.5",
+        "prettier": "^3.3.3",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.6.3",
+        "typescript-eslint": "^8.13.0"
+    },
+    "peerDependencies": {
+        "axios": "^1.6.8"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+}
