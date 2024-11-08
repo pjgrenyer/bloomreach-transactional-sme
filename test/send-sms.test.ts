@@ -5,18 +5,16 @@ dotenv.config({ path: '.test.env' });
 describe('Send SMS', () => {
     const auth: Auth = {
         username: process.env.BLOOMREACH_USERNAME as string,
-        password:  process.env.BLOOMREACH_PASSWORD as string,
-        baseUrl:  process.env.BLOOMREACH_BASEURL as string,
-        projectToken:  process.env.BLOOMREACH_PROJECT_TOKEN as string,
-    }
+        password: process.env.BLOOMREACH_PASSWORD as string,
+        baseUrl: process.env.BLOOMREACH_BASEURL as string,
+        projectToken: process.env.BLOOMREACH_PROJECT_TOKEN as string,
+    };
 
     it('send sms', async () => {
-        try
-        {
+        try {
             const resposne = await sendSMS(auth);
             console.log(resposne);
-        }
-        catch(error) {
+        } catch (error) {
             console.log(error.response.data);
         }
     });

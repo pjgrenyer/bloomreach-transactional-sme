@@ -9,15 +9,15 @@ export interface Auth {
 
 export const sendSMS = async (auth: Auth) => {
     const body = {
-        message: "Testing 123",
-        sender: "+447764621928",
+        message: 'Testing 123',
+        sender: '+447764621928',
         max_message_parts: 1,
-        "recipient": {
-            "phone": "+447764621928",
-            "customer_ids": {
-                "registered": "paul.grenyer@haven.com"
+        recipient: {
+            phone: '+447764621928',
+            customer_ids: {
+                registered: 'paul.grenyer@haven.com',
             },
-            "language": "en"
+            language: 'en',
         },
     };
 
@@ -32,4 +32,4 @@ export const sendSMS = async (auth: Auth) => {
     });
 
     return response.data;
-}
+};
