@@ -1,38 +1,38 @@
 {
-  "name": "bloomreach-transactional-sms",
-  "version": "0.0.1",
-  "description": "A nonofficial client library for sending transactional SMS via Bloomreach ",
-  "main": "index.js",
-  "scripts": {
-    "prepare": "husky",
-    "build": "rimraf dist && tsc",
-    "dev": "npm run build && node dist/index.js",
-    "test": "jest --coverage --testPathIgnorePatterns='integration.*'",
-    "postbuild": "cpy '**/*' '!**/*.ts' ../dist/ --cwd=src/ --no-overwrite --parents",
-    "test-integration": "jest --testRegex='integration.*'",
-    "format": "prettier --write 'src/**/*.ts' 'test/**/*.ts' './*.js' './*.json' '!./package-lock.json'",
-    "lint": "eslint . --ext .ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pjgrenyer/bloomreach-transactional-sms.git"
-  },
-  "keywords": [
-    "bloomreach",
-    "sms",
-    "transactional"
-  ],
-  "author": "Paul Grenyer",
-  "license": "SEE LICENSE IN LICENSE",
-  "bugs": {
-    "url": "https://github.com/pjgrenyer/bloomreach-transactional-sms/issues"
-  },
-  "homepage": "https://github.com/pjgrenyer/bloomreach-transactional-sms#readme",
-  "devDependencies": {
-    "cpy-cli": "^5.0.0",
-    "husky": "^9.1.6",
-    "prettier": "^3.3.3",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.6.3"
-  }
+    "name": "bloomreach-transactional-sms",
+    "version": "0.0.1",
+    "description": "A nonofficial client library for sending transactional SMS via Bloomreach ",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "husky",
+        "build": "rimraf dist && tsc",
+        "dev": "npm run build && node dist/index.js",
+        "test": "jest --coverage --testPathIgnorePatterns='integration.*'",
+        "postbuild": "cpy '**/*' '!**/*.ts' ../dist/ --cwd=src/ --no-overwrite --parents",
+        "test-integration": "jest --testRegex='integration.*'",
+        "format": "prettier --write 'src/**/*.ts' 'test/**/*.ts' './*.js' './*.json' '!./package-lock.json'",
+        "lint": "eslint . --ext .ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pjgrenyer/bloomreach-transactional-sms.git"
+    },
+    "keywords": [
+        "bloomreach",
+        "sms",
+        "transactional"
+    ],
+    "author": "Paul Grenyer",
+    "license": "SEE LICENSE IN LICENSE",
+    "bugs": {
+        "url": "https://github.com/pjgrenyer/bloomreach-transactional-sms/issues"
+    },
+    "homepage": "https://github.com/pjgrenyer/bloomreach-transactional-sms#readme",
+    "devDependencies": {
+        "cpy-cli": "^5.0.0",
+        "husky": "^9.1.6",
+        "prettier": "^3.3.3",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.6.3"
+    }
 }
