@@ -37,7 +37,7 @@ describe('Send SMS', () => {
         }
     });
 
-    it.only('send templated sms', async () => {
+    it('send templated sms', async () => {
         try {
             const resposne = await sendSMS(
                 auth,
